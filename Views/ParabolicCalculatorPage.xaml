@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calstructure.Views.ParabolicCalculatorPage"
+             Title="ParabolicCalculatorPage">
+
+    <StackLayout>
+        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand" />
+
+        <Label Text="{Binding Result}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="W =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="wEntry" Placeholder="W" Text="{Binding W}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Ls =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="lsEntry" Placeholder="Ls" Text="{Binding Ls}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="H =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="hEntry" Placeholder="H" Text="{Binding H}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clear_Clicked" />
+        <Button Text="Info" Clicked="Button_Clicked" WidthRequest="60"/>
+
+    </StackLayout>
+
+</ContentPage>

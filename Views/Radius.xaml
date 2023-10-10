@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calstructure.Views.Radius"
+             Title="Radius">
+    
+    <StackLayout>
+
+        <Image Source="formula_r.png" HorizontalOptions="CenterAndExpand" />
+        <Grid>
+            <Label Text="r" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Entry x:Name="rEntry" Placeholder="r" Text="{Binding R}" BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+        </Grid>
+        <Button Text="AC" HorizontalOptions="Center" Clicked="Button_Clicked" />
+    </StackLayout>
+</ContentPage>

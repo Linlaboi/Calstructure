@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calstructure", "Calstructure.csproj", "{ACD23369-FB02-48C0-8368-1C9F69B29226}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD23369-FB02-48C0-8368-1C9F69B29226}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2C83525-585F-4D15-8BA2-68EF8A35014D}
+	EndGlobalSection
+EndGlobal

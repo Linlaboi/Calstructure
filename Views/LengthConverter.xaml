@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calstructure.Views.LengthConverter"
+             Title="LengthConverter">
+
+    <StackLayout Padding="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Picker x:Name="inputUnitPicker" Title="Input Unit" Grid.Column="0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Rai</x:String>
+                        <x:String>Ngan</x:String>
+                        <x:String>Square Wah</x:String>
+                        <x:String>Square Meter</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker x:Name="outputUnitPicker" Title="Output Unit" Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Rai</x:String>
+                        <x:String>Ngan</x:String>
+                        <x:String>Square Wah</x:String>
+                        <x:String>Square Meter</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+
+        <Entry x:Name="inputField" Placeholder="Enter value" TextChanged="OnTextChanged" Keyboard="Numeric"/>
+
+        <Label x:Name="resultLabel" Text="Result will be shown here" FontSize="Large"/>
+
+    </StackLayout>
+
+</ContentPage>
