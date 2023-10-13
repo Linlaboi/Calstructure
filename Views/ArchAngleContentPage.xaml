@@ -30,7 +30,6 @@
 
         <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
         <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
-
     </StackLayout>
 
 </ContentPage>

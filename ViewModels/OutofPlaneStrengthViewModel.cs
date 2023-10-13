@@ -70,6 +70,11 @@ namespace Calstructure.ViewModels
             }
         }
 
+        private void OnPropertyChanged()
+        {
+            throw new NotImplementedException();
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void CalculatePeo()

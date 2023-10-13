@@ -6,11 +6,21 @@
     
     <StackLayout>
 
-        <Image Source="formula_r.png" HorizontalOptions="CenterAndExpand" />
+        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
+
+        <Label Text="{Binding Result}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+
         <Grid>
-            <Label Text="r" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center"/>
-            <Entry x:Name="rEntry" Placeholder="r" Text="{Binding R}" BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Degrees =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="rEntry" Placeholder="R" Text="{Binding R}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
         </Grid>
-        <Button Text="AC" HorizontalOptions="Center" Clicked="Button_Clicked" />
+
+        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
+        <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
+
     </StackLayout>
 </ContentPage>
