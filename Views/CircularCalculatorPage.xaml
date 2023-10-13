@@ -5,18 +5,41 @@
              Title="CircularCalculatorPage">
 
     <StackLayout>
-        <Label Text="q (Factor)" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
-        <Entry Placeholder="q" Text="{Binding Q}" 
-               BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
 
-        <Label Text="R (Radius)" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
-        <Entry Placeholder="R" Text="{Binding R}" 
-               BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
 
-        <Label Text="{Binding PrResult}" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding PrResult}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Q =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="qEntry" Placeholder="Q" Text="{Binding Q}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="R =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="rEntry" Placeholder="R" Text="{Binding R}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="H =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="hEntry" Placeholder="H" Text="{Binding H}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
 
         <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
         <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
+
     </StackLayout>
 
 </ContentPage>

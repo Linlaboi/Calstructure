@@ -5,24 +5,51 @@
              Title="OutOfPlaneCalculatorPage">
 
     <StackLayout>
-        
-        <Entry Placeholder="Enter value for El_o" Text="{Binding E}" 
-       BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
-        
-        <Entry Placeholder="Enter value for El_o" Text="{Binding Lo}" 
-       BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
 
-        <Entry Placeholder="Enter value for K_o" Text="{Binding Ko}" 
-       BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
 
-        <Entry Placeholder="Enter value for L_db" Text="{Binding Ldb}" 
-       BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+        <Label Text="{Binding peo}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
 
-        <Label Text="{Binding Peo}" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
-        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
-        <Button Text="Ki Table" Clicked="Button_Clicked_1" HorizontalOptions="Center" WidthRequest="100"/>
-        <Button Text="Info" Clicked="Button_Clicked_2" WidthRequest="60"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="E =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="eEntry" Placeholder="E" Text="{Binding E}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Lo =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="loEntry" Placeholder="Lo" Text="{Binding Lo}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Ko =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="koEntry" Placeholder="Ko" Text="{Binding Ko}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Ldb =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+            <Entry x:Name="ldboEntry" Placeholder="Ldb" Text="{Binding Ldbo}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+        </Grid>
+
+        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clear_Clicked" />
+        <Button Text="Info" Clicked="Button_Clicked" WidthRequest="60"/>
+        <Button Text="Ki Table" Clicked="Button_Clicked_3" HorizontalOptions="Center" WidthRequest="100"/>
 
     </StackLayout>
-    
+
 </ContentPage>

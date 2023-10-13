@@ -5,7 +5,8 @@
              Title="ParabolicCalculatorPage">
 
     <StackLayout>
-        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand" />
+        
+        <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
 
         <Label Text="{Binding Result}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
 

@@ -15,8 +15,8 @@ public partial class ArchAngleContentPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        nEntry.Text = "";
-        _viewModel.Result = 0;
+        dEntry.Text = "";
+        rEntry.Text = "";
     }
 
     private async void Button_Clicked_1(object sender, EventArgs e)
