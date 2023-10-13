@@ -10,17 +10,29 @@ namespace Calstructure.ViewModels
 {
     public class OutofPlaneStrengthViewModel : INotifyPropertyChanged
     {
-        private double _elo;
+        private double _e;
+        private double _lo;
         private double _ko;
         private double _ldb;
         private double _peo;
 
-        public double Elo
+        public double E
         {
-            get => _elo;
+            get => _e;
             set
             {
-                _elo = value;
+                _e = value;
+                OnPropertyChanged();
+                CalculatePeo();
+            }
+        }
+
+        public double Lo
+        {
+            get => _lo;
+            set
+            {
+                _lo = value;
                 OnPropertyChanged();
                 CalculatePeo();
             }
@@ -67,7 +79,7 @@ namespace Calstructure.ViewModels
 
         private void CalculatePeo()
         {
-            Peo = (Math.PI * Math.PI * Elo) / (Math.Pow(Ko * Ldb, 2));
+            Peo = (Math.PI * Math.PI * E * Lo) / (Math.Pow(Ko * Ldb, 2));
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

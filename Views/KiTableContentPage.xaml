@@ -5,55 +5,99 @@
              Title="KiTableContentPage">
 
     <ScrollView>
-        <Grid Padding="10">
+        <Frame BorderColor="Transparent" CornerRadius="0" Padding="0">
+            <Grid Padding="10">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-            <Label Text="Arch Form" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
-            <Label Text="End Conditions" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"/>
-            <Label Text="H/Lg" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"/>
-            <Label Text="Ki" Grid.Row="0" Grid.Column="3" FontAttributes="Bold"/>
+                <Frame BorderColor="Black" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Arch Form" FontAttributes="Bold"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="0" Grid.Column="1">
+                    <Label Text="End Conditions" FontAttributes="Bold"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="0" Grid.Column="2">
+                    <Label Text="H/Lg" FontAttributes="Bold"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="0" Grid.Column="3">
+                    <Label Text="Ki" FontAttributes="Bold"/>
+                </Frame>
 
-            <Label Text="Circular" Grid.Row="1" Grid.Column="0"/>
-            <Label Text="Pinned" Grid.Row="1" Grid.Column="1"/>
-            <Label Text="0.1 ≤ H/Lg ≤ 0.3" Grid.Row="1" Grid.Column="2"/>
-            <Label Text="0.55" Grid.Row="1" Grid.Column="3"/>
+                <Frame BorderColor="Black" Grid.Row="1" Grid.Column="0">
+                    <Label Text="Circular"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="1" Grid.Column="1">
+                    <Label Text="Pinned"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="1" Grid.Column="2">
+                    <Label Text="0.1 ≤ H/Lg ≤ 0.3"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="1" Grid.Column="3">
+                    <Label Text="0.55"/>
+                </Frame>
 
-            <Label Text="0.3 ≤ H/Lg ≤ 0.5" Grid.Row="2" Grid.Column="2"/>
-            <Label Text="0.60" Grid.Row="2" Grid.Column="3"/>
+                <Frame BorderColor="Black" Grid.Row="2" Grid.Column="2">
+                    <Label Text="0.3 ≤ H/Lg ≤ 0.5"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="2" Grid.Column="3">
+                    <Label Text="0.60"/>
+                </Frame>
 
-            <Label Text="Fixed" Grid.Row="3" Grid.Column="1"/>
-            <Label Text="All" Grid.Row="3" Grid.Column="2"/>
-            <Label Text="0.40" Grid.Row="3" Grid.Column="3"/>
+                <Frame BorderColor="Black" Grid.Row="3" Grid.Column="1">
+                    <Label Text="Fixed"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="3" Grid.Column="2">
+                    <Label Text="All"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="3" Grid.Column="3">
+                    <Label Text="0.40"/>
+                </Frame>
 
-            <Label Text="Parabolic" Grid.Row="4" Grid.Column="0"/>
-            <Label Text="Pinned" Grid.Row="4" Grid.Column="1"/>
-            <Label Text="All" Grid.Row="4" Grid.Column="2"/>
-            <Label Text="0.50" Grid.Row="4" Grid.Column="3"/>
+                <Frame BorderColor="Black" Grid.Row="4" Grid.Column="0">
+                    <Label Text="Parabolic"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="4" Grid.Column="1">
+                    <Label Text="Pinned"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="4" Grid.Column="2">
+                    <Label Text="All"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="4" Grid.Column="3">
+                    <Label Text="0.50"/>
+                </Frame>
 
-            <Label Text="Fixed" Grid.Row="5" Grid.Column="1"/>
-            <Label Text="0.1 ≤ H/Lg ≤ 0.3" Grid.Row="5" Grid.Column="2"/>
-            <Label Text="0.40" Grid.Row="5" Grid.Column="3"/>
-
-            <Label Text="0.3 ≤ H/Lg ≤ 0.5" Grid.Row="6" Grid.Column="2"/>
-            <Label Text="0.35" Grid.Row="6" Grid.Column="3"/>
-            
-        </Grid>
+                <Frame BorderColor="Black" Grid.Row="5" Grid.Column="1">
+                    <Label Text="Fixed"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="5" Grid.Column="2">
+                    <Label Text="0.1 ≤ H/Lg ≤ 0.3"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="5" Grid.Column="3">
+                    <Label Text="0.40"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="6" Grid.Column="2">
+                    <Label Text="0.3 ≤ H/Lg ≤ 0.5"/>
+                </Frame>
+                <Frame BorderColor="Black" Grid.Row="6" Grid.Column="3">
+                    <Label Text="0.35"/>
+                </Frame>
+            </Grid>
+        </Frame>
     </ScrollView>
-    
+
 </ContentPage>

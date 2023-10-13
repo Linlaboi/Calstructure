@@ -1,4 +1,4 @@
-namespace Calstructure.Views;
+﻿namespace Calstructure.Views;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Layouts;
 using System;
@@ -16,7 +16,6 @@ public partial class ParabolicCalculatorPage : ContentPage
 
     }
 
-
     private void Button_Clear_Clicked(object sender, EventArgs e)
     {
         wEntry.Text = "";
@@ -28,10 +27,10 @@ public partial class ParabolicCalculatorPage : ContentPage
     private async void Button_Clicked(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
-        "Here is the meaning of each factor:\n\n" +
-        "W: [Explanation for W]\n" +
-        "Ls: [Explanation for Ls]\n" +
-        "H: [Explanation for H]\n",
+        "ความหมายของแต่ละตัวแปร:\n\n" +
+        "W: แรงอดที่กดทับที่กระทบตามรอยแนวยาว\n" +
+        "Ls: ระยะซัพพอร์ต A  ถึง B\n" +
+        "H: ระยะซัพพอร์ตถึงจุดสูงสุดของส่วนโค้ง\n",
         "OK");
     }
 }

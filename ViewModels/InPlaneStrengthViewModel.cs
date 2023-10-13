@@ -10,19 +10,31 @@ namespace Calstructure.ViewModels
 {
     public class InPlaneStrengthViewModel : INotifyPropertyChanged
     {
-        private double _eli;
+        private double _e;
+        private double _li;
         private double _ki;
         private double _ld;
         private double _pei;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public double Eli
+        public double E
         {
-            get => _eli;
+            get => _e;
             set
             {
-                _eli = value;
+                _e = value;
+                OnPropertyChanged();
+                CalculatePei();
+            }
+        }
+
+        public double Li
+        {
+            get => _li;
+            set
+            {
+                _li = value;
                 OnPropertyChanged();
                 CalculatePei();
             }
@@ -67,7 +79,7 @@ namespace Calstructure.ViewModels
 
         private void CalculatePei()
         {
-            Pei = (Math.PI * Math.PI * Eli) / (Math.Pow(Ki * Ld, 2));
+            Pei = (Math.PI * Math.PI * E * Li) / (Math.Pow(Ki * Ld, 2));
         }
     }
 }

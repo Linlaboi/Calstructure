@@ -1,4 +1,4 @@
-namespace Calstructure.Views;
+﻿namespace Calstructure.Views;
 using Calstructure.ViewModels;
 public partial class OutOfPlaneCalculatorPage : ContentPage
 {
@@ -12,8 +12,9 @@ public partial class OutOfPlaneCalculatorPage : ContentPage
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
-		_viewModel.Elo = 0;
-		_viewModel.Ko = 0;
+		_viewModel.E = 0;
+        _viewModel.Lo = 0;
+        _viewModel.Ko = 0;
 		_viewModel.Ldb = 0;
 	}
 
@@ -25,10 +26,11 @@ public partial class OutOfPlaneCalculatorPage : ContentPage
     private async void Button_Clicked_2(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
-      "Here is the meaning of each factor:\n\n" +
-      "Elo: [Explanation for W]\n" +
-      "Ko: [Explanation for Ls]\n" +
-      "Ldb: [Explanation for H]\n",
+      "ความหมายของแต่ละตัวแปร:\n\n" +
+      "E:โดดูลัสของสภาพยืดยุ่น\n" +
+      "Lo: โมเมนต์ความเฉื่อย\n" +
+      "Ko: ค่าคงที่ของระยะประสิทธิผล\n" +
+      "Ldb: ระยะความโค้ง, CM\n",
       "OK");
     }
 }

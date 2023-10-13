@@ -22,9 +22,9 @@ public partial class ArchAngleContentPage : ContentPage
     private async void Button_Clicked_1(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
-     "Here is the meaning of each factor:\n\n" +
-     "n: [Explanation for W]\n" +
-     "Rad: [Explanation for Ls]\n",
+     "ความหมายของแต่ละตัวแปร:\n\n" +
+     "n: รัศมีจุดศูนย์ถ่วงของความโค้ง\n" +
+     "Rad: ระยะรัศมีจนถึงจุดที่สนใจ\n",
      "OK");
     }
 }

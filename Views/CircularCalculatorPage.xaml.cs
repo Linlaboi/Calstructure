@@ -21,9 +21,9 @@ public partial class CircularCalculatorPage : ContentPage
     private async void Button_Clicked_1(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
-     "Here is the meaning of each factor:\n\n" +
-     "Q: [Explanation for W]\n" +
-     "R: [Explanation for Ls]\n",
+     "ความหมายของแต่ละตัวแปร:\n\n" +
+     "Q: แรงที่กระทำต่อโครงสร้าง, kN/M\n" +
+     "R: รัศมีจุดศูนย์ถ่วงของความโค้ง\n",
      "OK");
     }
 }

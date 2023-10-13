@@ -1,4 +1,4 @@
-namespace Calstructure.Views;
+﻿namespace Calstructure.Views;
 using Calstructure.ViewModels;
 public partial class InPlaneStrengthCalculatorPage : ContentPage
 {
@@ -12,7 +12,8 @@ public partial class InPlaneStrengthCalculatorPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        _viewModel.Eli = 0;
+        _viewModel.E = 0;
+        _viewModel.Li = 0;
         _viewModel.Ki = 0;
         _viewModel.Ld = 0;
         _viewModel.Pei = 0;
@@ -26,11 +27,11 @@ public partial class InPlaneStrengthCalculatorPage : ContentPage
     private async void Button_Clicked_2(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
-      "Here is the meaning of each factor:\n\n" +
-      "Eli: [Explanation for W]\n" +
-      "Ki: [Explanation for Ls]\n" +
-      "Ld: [Explanation for H]\n" +
-      "Pei []\n",
+      "ความหมายของแต่ละตัวแปร:\n\n" +
+      "E: โดดูลัสของสภาพยืดยุ่น\n" +
+      "Li: โมเมนต์ความเฉื่อย\n" +
+      "Ki: ค่าคงที่ของระยะประสิทธิผล\n" +
+      "Ld: ระยะความโค้ง, CM\n",      
       "OK");
     }
 }

@@ -5,7 +5,11 @@
              Title="OutOfPlaneCalculatorPage">
 
     <StackLayout>
-        <Entry Placeholder="Enter value for El_o" Text="{Binding Elo}" 
+        
+        <Entry Placeholder="Enter value for El_o" Text="{Binding E}" 
+       BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+        
+        <Entry Placeholder="Enter value for El_o" Text="{Binding Lo}" 
        BackgroundColor="White" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
 
         <Entry Placeholder="Enter value for K_o" Text="{Binding Ko}" 
