@@ -1,4 +1,4 @@
-namespace Calstructure.Views;
+﻿namespace Calstructure.Views;
 using Calstructure.ViewModels;
 using Microsoft.Maui.Controls;
 
@@ -18,5 +18,13 @@ public partial class Radius : ContentPage
         rEntry.Text = "";
         _viewModel.Result = 0;
 
+    }
+
+    private async void Button_Clicked_1(object sender, EventArgs e)
+    {
+        await DisplayAlert("Factors Explanation",
+      "ความหมายของแต่ละตัวแปร:\n\n" +
+      "R: รัศมี\n",
+      "OK");
     }
 }

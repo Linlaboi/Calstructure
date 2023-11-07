@@ -8,7 +8,7 @@
         
         <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
         
-        <Label Text="{Binding peo}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+        <Label Text="{Binding Peo}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -43,11 +43,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Text="Ldb =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
-            <Entry x:Name="ldboEntry" Placeholder="Ldb" Text="{Binding Ldbo}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            <Entry x:Name="ldboEntry" Placeholder="Ldb" Text="{Binding Ldb}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
         </Grid>
 
-        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clear_Clicked" />
-        <Button Text="Info" Clicked="Button_Clicked" WidthRequest="60"/>
+        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
+        <Button Text="Info" Clicked="Button_Clicked_4" WidthRequest="60"/>
         <Button Text="Ki Table" Clicked="Button_Clicked_3" HorizontalOptions="Center" WidthRequest="100"/>
 
     </StackLayout>

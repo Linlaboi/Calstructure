@@ -18,12 +18,7 @@ public partial class OutOfPlaneCalculatorPage : ContentPage
 		_viewModel.Ldb = 0;
 	}
 
-	private async void Button_Clicked_1(object sender, EventArgs e)
-	{
-		await Navigation.PushAsync(new KiTableContentPage());
-	}
-
-    private async void Button_Clicked_2(object sender, EventArgs e)
+    private async void Button_Clicked_4(object sender, EventArgs e)
     {
         await DisplayAlert("Factors Explanation",
       "ความหมายของแต่ละตัวแปร:\n\n" +
@@ -32,5 +27,10 @@ public partial class OutOfPlaneCalculatorPage : ContentPage
       "Ko: ค่าคงที่ของระยะประสิทธิผล\n" +
       "Ldb: ระยะความโค้ง, CM\n",
       "OK");
+    }
+
+    private async void Button_Clicked_3(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new KiTableContentPage());
     }
 }

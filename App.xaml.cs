@@ -6,8 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Views.KiTableContentPage();
-                //new AppShell();
+            MainPage = new AppShell();
         }
     }
 }
