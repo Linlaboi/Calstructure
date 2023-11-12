@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calstructure.Views.Testcarousel"
+             Title="Testcarousel">
+    <VerticalStackLayout BackgroundColor="#002c4b">
+        <CarouselView x:Name="carouselView" IndicatorView="indicatorView" Margin="0,70,0,0">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               WidthRequest="325" HeightRequest="600" 
+                               CornerRadius="10" BackgroundColor="#001524" BorderColor="#001524"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Frame Margin="0,25,0,50" WidthRequest="150" HeightRequest="150" BorderColor="#001524" BackgroundColor="#001524">
+                                    <Image Source="{Binding ImageUrl}"
+                                            Aspect="AspectFill"
+                                            HeightRequest="150"
+                                            WidthRequest="150"
+                                            HorizontalOptions="Center" Background="AliceBlue" />
+                                </Frame>
+                                <Button Text="{Binding Title}"
+                                        BackgroundColor="#445D48" TextColor="#D6CC99" 
+                                        HorizontalOptions="Center" HeightRequest="75" WidthRequest="250" 
+                                        Margin="0,0,0,0" FontSize="30" FontAttributes="Bold" CornerRadius="50"/>
+                                <Border StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 10,10,10,10"
+                                        Padding="16,8" WidthRequest="310" HeightRequest="180" Margin="0,12,0,0"
+                                        Background="#001524">
+                                    <Label Text="{Binding Description}" TextColor="White"/>
+                                </Border>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView x:Name="indicatorView" Margin="30" HorizontalOptions="Center" IndicatorColor="White" SelectedIndicatorColor="#001524"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Calstructure"
-             x:Class="Calstructure.MainPage">
+             x:Class="Calstructure.MainPage"
+             >
 
-    <StackLayout BackgroundColor="Black">
+    <StackLayout BackgroundColor="#002c4b">
         <Grid  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -14,10 +15,36 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Circular" Clicked="OnCircularButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Grid.Column="1" Text="Parabolic" Clicked="OnParabolicButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Grid.Row="1" Grid.Column="0" Text="In-Plane Strength" Clicked="OnInPlaneStrengthButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Grid.Row="2" Grid.Column="2" Text="Out-of-Plane Strength" Clicked="OnOutOfPlaneStrengthButtonClicked" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Frame WidthRequest="325" HeightRequest="600" CornerRadius="10" BackgroundColor="#001524" BorderColor="#001524">
+                <Button BackgroundColor="#445D48" TextColor="#D6CC99" Text="Parabolic" 
+                        HorizontalOptions="Center" HeightRequest="75" Clicked="OnParabolicButtonClicked"
+                        WidthRequest="310" Margin="0,0,0,30" FontSize="30" FontAttributes="Bold" CornerRadius="10" 
+                        />
+            </Frame>
+            <Frame Margin="0,0,0,350" WidthRequest="150" HeightRequest="150" BorderColor="#001524" BackgroundColor="#001524">
+                <Image Source="parabola.png" WidthRequest="150" HeightRequest="150"></Image>
+            </Frame>
+            <Border StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10,10,10,10"
+                    Padding="16,8" WidthRequest="310" HeightRequest="180" Margin="0,250,0,0"
+                    Background="#001524">
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Eu consequat ac felis donec et odio pellentesque. Vestibulum lorem sed risus ultricies tristique nulla aliquet."
+                        TextColor="White"/>
+            </Border>
+
+
+
+
+
+
+            <!--<Button Grid.Column="0" Text="Circular" Clicked="OnCircularButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" 
+                    WidthRequest="175" Margin="0,0,0,100" FontSize="18" FontAttributes="Bold"/>
+            <Button Grid.Column="1" Text="Parabolic" Clicked="OnParabolicButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"
+                    WidthRequest="175" Margin="10,0,0,100" FontSize="18" FontAttributes="Bold"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="In-Plane Strength" Clicked="OnInPlaneStrengthButtonClicked" HorizontalOptions="Center" VerticalOptions="Center"
+                    WidthRequest="175" FontSize="18"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="Out-of-Plane Strength" Clicked="OnOutOfPlaneStrengthButtonClicked" VerticalOptions="Center" HorizontalOptions="Center"
+                    WidthRequest="175" FontSize="18"/>-->
         </Grid>
     </StackLayout>
 </ContentPage>
