@@ -4,40 +4,71 @@
              x:Class="Calstructure.Views.ParabolicCalculatorPage"
              Title="ParabolicCalculatorPage">
 
-    <StackLayout>
+    <StackLayout Background="#1C375C">
         <Image Source="formula_peo.PNG" HorizontalOptions="CenterAndExpand" Margin="0,100,0,0"/>
 
-        <Label Text="{Binding Result}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
-
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
-            <Label Text="W =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
-            <Entry x:Name="wEntry" Placeholder="W" Text="{Binding W}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            <Label Grid.Column="0" Text="Result" VerticalOptions="Center" Margin="40,20,0,0" FontSize="24" FontAttributes="Italic,Bold"
+                   TextColor="Green"/>
+            <Label Grid.Column="1" Text="{Binding Result}" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,30,40,10" 
+                   TextColor="Green"/>
         </Grid>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Ls =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
-            <Entry x:Name="lsEntry" Placeholder="Ls" Text="{Binding Ls}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
-        </Grid>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Label Text="H =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
-            <Entry x:Name="hEntry" Placeholder="H" Text="{Binding H}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
-        </Grid>
 
-        <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clear_Clicked" />
-        <Button Text="Info" Clicked="Button_Clicked" WidthRequest="60"/>
+        <Frame Margin="15,20,15,0" BackgroundColor="#001524" BorderColor="#001524" HeightRequest="435">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5" Text="W =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
+                    <Entry Margin="20,0,20,0" x:Name="wEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding W}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5" Text="Ls =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
+                    <Entry Margin="20,0,20,0" x:Name="lsEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Ls}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5" Text="H =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
+                    <Entry Margin="20,0,20,0" x:Name="hEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding H}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
+                </Grid>
+                <Grid Margin="0,50,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
+                    WidthRequest="200" Margin="80,0,0,0" Clicked="Button_Clear_Clicked" Background="#D71313" HorizontalOptions="Center"/>
+                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked" WidthRequest="50" HeightRequest="50" Margin="50,0,0,0" CornerRadius="25" Background="#164863"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        
+
+
+
 
     </StackLayout>
 

@@ -4,7 +4,7 @@
              x:Class="Calstructure.Views.CircularCalculatorPage"
              Title="CircularCalculatorPage">
 
-    <StackLayout>
+    <!--<StackLayout>
 
         <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
 
@@ -30,6 +30,63 @@
 
         <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
         <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
+    </StackLayout>-->
+    <StackLayout Background="#">
+        <Image Source="formula_peo.PNG" HorizontalOptions="CenterAndExpand" Margin="0,100,0,0"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Result" VerticalOptions="Center" Margin="40,20,0,0" FontSize="24" FontAttributes="Italic,Bold"
+                   TextColor="Green"/>
+            <Label Grid.Column="1" Text="{Binding PrResult}" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,30,40,10" 
+                   TextColor="Green"/>
+        </Grid>
+
+
+
+        <Frame Margin="15,20,15,0" BackgroundColor="#001524" BorderColor="#001524" HeightRequest="435">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5" Text="Q =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
+                    <Entry Margin="20,0,20,0" x:Name="qEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Q}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5" Text="R =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
+                    <Entry Margin="20,0,20,0" x:Name="rEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding R}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
+                </Grid>
+
+                <Grid Margin="0,50,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
+                    WidthRequest="200" Margin="80,0,0,0" Clicked="Button_Clicked" Background="#D71313" HorizontalOptions="Center"/>
+                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked_1" WidthRequest="50" HeightRequest="50" Margin="50,0,0,0" CornerRadius="25" Background="#164863"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+
+
+
+
+
     </StackLayout>
 
 </ContentPage>

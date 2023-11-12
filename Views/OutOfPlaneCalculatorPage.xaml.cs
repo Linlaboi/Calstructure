@@ -33,4 +33,9 @@ public partial class OutOfPlaneCalculatorPage : ContentPage
     {
         await Navigation.PushAsync(new KiTableContentPage());
     }
+
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new KiTableContentPage());
+    }
 }

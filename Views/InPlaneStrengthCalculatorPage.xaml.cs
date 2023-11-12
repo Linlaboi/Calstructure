@@ -34,4 +34,8 @@ public partial class InPlaneStrengthCalculatorPage : ContentPage
       "Ld: ระยะความโค้ง, CM\n",      
       "OK");
     }
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new KiTableContentPage());
+    }
 }

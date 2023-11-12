@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\MaterialIcons-Regular.ttf" />
+	  <None Remove="Resources\Fonts\MaterialIconsOutlined-Regular.otf" />
+	  <None Remove="Resources\Fonts\MaterialIconsRound-Regular.otf" />
+	  <None Remove="Resources\Fonts\MaterialIconsSharp-Regular.otf" />
+	  <None Remove="Resources\Fonts\MaterialIconsTwoTone-Regular.otf" />
 	  <None Remove="Resources\Images\circular.png" />
 	  <None Remove="Resources\Images\formula_peo.png" />
 	  <None Remove="Resources\Images\next.png" />
@@ -67,6 +72,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CircularCalculatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CollectionTab.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DevelopedArchLength.xaml">

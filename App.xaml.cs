@@ -7,7 +7,8 @@ using Views;
         {
             InitializeComponent();
 
-            //MainPage = new AppShell();
-            MainPage = new Testcarousel();
-        }
+        //MainPage = new AppShell();
+        //MainPage = new Testcarousel();
+        MainPage = new CollectionTab();
+    }
     }
