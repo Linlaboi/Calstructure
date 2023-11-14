@@ -33,4 +33,9 @@ public partial class ParabolicCalculatorPage : ContentPage
         "H: ระยะซัพพอร์ตถึงจุดสูงสุดของส่วนโค้ง\n",
         "OK");
     }
+
+    private async void Button_Goback(object sender, EventArgs e)
+    {
+        await Navigation.PopModalAsync();
+    }
 }

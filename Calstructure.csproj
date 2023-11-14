@@ -77,6 +77,9 @@
 	  <MauiXaml Update="Views\CollectionTab.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CollectionTabRaw.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\DevelopedArchLength.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

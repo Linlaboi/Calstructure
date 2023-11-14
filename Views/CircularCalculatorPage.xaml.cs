@@ -26,4 +26,9 @@ public partial class CircularCalculatorPage : ContentPage
      "R: รัศมีจุดศูนย์ถ่วงของความโค้ง\n",
      "OK");
     }
+
+    private async void Button_Goback(object sender, EventArgs e)
+    {
+        await Navigation.PopModalAsync();
+    }
 }

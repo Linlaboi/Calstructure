@@ -61,7 +61,8 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
                     WidthRequest="200" Margin="80,0,0,0" Clicked="Button_Clear_Clicked" Background="#D71313" HorizontalOptions="Center"/>
-                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked" WidthRequest="50" HeightRequest="50" Margin="50,0,0,0" CornerRadius="25" Background="#164863"/>
+                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked" WidthRequest="50" HeightRequest="50" Margin="80,0,0,0" CornerRadius="25" Background="#164863"/>
+                    <Button Grid.Column="1" Text="Back" FontSize="20" FontAttributes="Bold" Clicked="Button_Goback" WidthRequest="50" HeightRequest="50" Margin="10,0,00,0" CornerRadius="25" Background="#164863"/>
                 </Grid>
             </StackLayout>
         </Frame>

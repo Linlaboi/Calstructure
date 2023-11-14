@@ -1,12 +1,9 @@
-using AndroidX.Lifecycle;
-
 namespace Calstructure.Views;
 
-public partial class CollectionTab : TabbedPage
+public partial class CollectionTab : ContentPage
 {
 	public CollectionTab()
 	{
 		InitializeComponent();
-        
-    }
+	}
 }

@@ -31,7 +31,7 @@
         <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
         <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
     </StackLayout>-->
-    <StackLayout Background="#">
+    <StackLayout Background="#1C375C">
         <Image Source="formula_peo.PNG" HorizontalOptions="CenterAndExpand" Margin="0,100,0,0"/>
 
         <Grid>
@@ -79,6 +79,7 @@
                     <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
                     WidthRequest="200" Margin="80,0,0,0" Clicked="Button_Clicked" Background="#D71313" HorizontalOptions="Center"/>
                     <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked_1" WidthRequest="50" HeightRequest="50" Margin="50,0,0,0" CornerRadius="25" Background="#164863"/>
+                    <Button Grid.Column="1" Text="Back" FontSize="20" FontAttributes="Bold" Clicked="Button_Goback" WidthRequest="50" HeightRequest="50" Margin="10,0,00,0" CornerRadius="25" Background="#164863"/>
                 </Grid>
             </StackLayout>
         </Frame>

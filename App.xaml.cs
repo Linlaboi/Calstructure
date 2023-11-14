@@ -9,6 +9,6 @@ using Views;
 
         //MainPage = new AppShell();
         //MainPage = new Testcarousel();
-        MainPage = new CollectionTab();
+        MainPage = new Testcarousel();
     }
     }
