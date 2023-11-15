@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Text="Radians =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
-            <Entry x:Name="rEntry" Placeholder="Radians" Text="{Binding Radians}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            <Entry x:Name="r2Entry" Placeholder="Radians" Text="{Binding Radians}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
         </Grid>
 
         <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />

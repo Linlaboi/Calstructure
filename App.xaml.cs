@@ -2,13 +2,15 @@
 using Views;
 
     public partial class App : Application
+{
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
         //MainPage = new AppShell();
         //MainPage = new Testcarousel();
-        MainPage = new Testcarousel();
+        MainPage = new CollectionTab();
     }
-    }
+}
+    
+

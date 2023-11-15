@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calstructure.Views.CollectionTab">
     
-    <ContentPage>
+    <ContentPage Title="Area">
         <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
             <Picker x:Name="AreaPicker" Title="Area of">
                 <Picker.ItemsSource>
@@ -27,4 +27,111 @@
             <Button Text="AC" HorizontalOptions="CenterAndExpand" Clicked="ClearEntries"/>
         </StackLayout>
     </ContentPage>
+    <ContentPage Title="Converter">
+        <StackLayout Padding="20">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Picker x:Name="inputUnitPicker" Title="Input Unit" Grid.Column="0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Rai</x:String>
+                            <x:String>Ngan</x:String>
+                            <x:String>Square Wah</x:String>
+                            <x:String>Square Meter</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker x:Name="outputUnitPicker" Title="Output Unit" Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Rai</x:String>
+                            <x:String>Ngan</x:String>
+                            <x:String>Square Wah</x:String>
+                            <x:String>Square Meter</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+
+            <Entry x:Name="inputField" Placeholder="Enter value" TextChanged="OnTextChanged" Keyboard="Numeric"/>
+
+            <Label x:Name="resultLabel" Text="Result will be shown here" FontSize="Large"/>
+
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="ArchLength">
+        <StackLayout>
+            <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="{Binding LdResult}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Degrees =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+                <Entry x:Name="rEntry" Placeholder="Radius" Text="{Binding R}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Radians =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+                <Entry x:Name="thetaEntry" Placeholder="θ" Text="{Binding Theta}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            </Grid>
+
+            <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" />
+            <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
+
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Angle">
+        <StackLayout>
+
+            <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="{Binding Radians}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Degrees =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+                <Entry x:Name="dEntry" Placeholder="Degrees" Text="{Binding Degrees}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Radians =" FontSize="Large" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0"/>
+                <Entry x:Name="r2Entry" Placeholder="Radians" Text="{Binding Radians}" BackgroundColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1"/>
+            </Grid>
+
+            <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked_2" />
+            <Button Text="Info" Clicked="Button_Clicked_3" WidthRequest="60"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Mall">
+        <VerticalStackLayout  Margin="0,150,0,0">
+            <Label Text="กรณีที่ 1" HorizontalOptions="Center"/>
+            <Button Text="หนาแน่นน้อยจอดรถภายนอกทั้งหมด" Clicked="Button_Clicked_4" VerticalOptions="Center" Margin="50"/>
+            <Label Text="กรณีที่ 2" HorizontalOptions="Center"/>
+            <Button Text="หนาแน่นปานกลางจอดรถใต้ตึก 80%" Clicked="Button_Clicked_5" VerticalOptions="Center" Margin="50" />
+            <Label Text="กรณีที่ 3" HorizontalOptions="Center"/>
+            <Button Text="หนาแน่นปานกลางจอดรถใต้ตึก 100 %" Clicked="Button_Clicked_6" VerticalOptions="Center" Margin="50"/>
+        </VerticalStackLayout>
+    </ContentPage>
+    
 </TabbedPage>
