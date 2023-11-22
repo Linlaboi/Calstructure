@@ -135,23 +135,6 @@ public partial class CollectionTab : TabbedPage
             "OK");
     }
 
-    private async void Button_Clicked_4(object sender, EventArgs e)
-    {
-        await Navigation.PushModalAsync(new EquationPage(1));
-    }
-
-    private async void Button_Clicked_5(object sender, EventArgs e)
-    {
-        await Navigation.PushModalAsync(new EquationPage(2));
-
-    }
-
-    private async void Button_Clicked_6(object sender, EventArgs e)
-    {
-        await Navigation.PushModalAsync(new EquationPage(3));
-
-    }
-
     private async void inputUnitPicker_SelectedIndexChanged(object sender, EventArgs e)
     {
         /*var fadeoutinput = new Animation((value) =>
@@ -205,5 +188,20 @@ public partial class CollectionTab : TabbedPage
         await inputField.FadeTo(1, 500);
         inputField.IsVisible = true;
 
+    }
+
+    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        Navigation.PushModalAsync(new EquationPage(1));
+    }
+
+    private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
+    {
+        Navigation.PushModalAsync(new EquationPage(2));
+    }
+
+    private void TapGestureRecognizer_Tapped_2(object sender, TappedEventArgs e)
+    {
+        Navigation.PushModalAsync(new EquationPage(3));
     }
 }
