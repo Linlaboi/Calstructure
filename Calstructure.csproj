@@ -58,6 +58,7 @@
 	  <None Remove="Resources\Images\formula_peo.png" />
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\Parabola.png" />
+	  <None Remove="Resources\Images\right.png" />
 	</ItemGroup>
 
 	<ItemGroup>

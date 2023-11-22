@@ -62,9 +62,9 @@
                 <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Text="Result" VerticalOptions="Center" Margin="40,20,0,0" FontSize="24" FontAttributes="Italic,Bold"
-           TextColor="Green"/>
+           TextColor="#F5F7F8"/>
             <Label Grid.Column="1" Text="{Binding Peo}" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,30,40,10" 
-           TextColor="Green"/>
+           TextColor="#F5F7F8"/>
         </Grid>
 
 
@@ -78,7 +78,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="E =" FontSize="23" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="eEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding E}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="eEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding E}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
 
@@ -89,7 +89,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="Lo =" FontSize="23" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="loEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Lo}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="loEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding Lo}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
 
@@ -100,7 +100,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="Ko =" FontSize="23" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="koEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Ko}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="koEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding Ko}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
                 <Grid>
@@ -110,7 +110,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="Ldb =" FontSize="23" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="ldboEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Ldb}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="ldboEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding Ldb}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
                 <Grid Margin="0,50,0,0">
@@ -119,13 +119,19 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Text="Clear" FontSize="20" FontAttributes="Bold" 
                         WidthRequest="175" Margin="0,0,0,0" Clicked="Button_Clicked" Background="#D71313" HorizontalOptions="Center"/>
                     <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked_4" 
-                        WidthRequest="50" HeightRequest="50" Margin="0,0,0,0" CornerRadius="25" Background="#164863"/>
+                        WidthRequest="50" HeightRequest="50" Margin="0,0,0,0" CornerRadius="25" Background="#1C375C"/>
+                    <Button Grid.Row="1" Grid.ColumnSpan="3" Text="Back" FontSize="20" FontAttributes="Bold" 
+                            WidthRequest="300" Margin="0,30,0,0" Background="#1C375C" HorizontalOptions="CenterAndExpand"/>
                     <!--<Button Grid.Column="2" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked_3"
                         WidthRequest="50" HeightRequest="50" Margin="0,0,0,0" CornerRadius="25" Background="#164863"/>-->
-                    <Frame Grid.Column="2" BackgroundColor="#164863" BorderColor="#164863" CornerRadius="25"
+                    <Frame Grid.Column="2" BackgroundColor="#1C375C" BorderColor="#1C375C" CornerRadius="25"
                            HeightRequest="50" WidthRequest="50" Padding="10">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">

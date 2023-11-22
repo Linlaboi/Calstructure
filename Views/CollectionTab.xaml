@@ -2,70 +2,149 @@
 <TabbedPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calstructure.Views.CollectionTab">
-    
-    <ContentPage Title="Area">
-        <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-            <Picker x:Name="AreaPicker" Title="Area of">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Square</x:String>
-                        <x:String>UnequalRectangle</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
 
-            <Entry x:Name="SideEntry" Placeholder="Side" Text="{Binding Side}" IsVisible="True" />
+    <ContentPage Title="Area">
+        <StackLayout>
+            <!--<GraphicsView Drawable="{StaticResource drawable}"
+                      HeightRequest="300"
+                      WidthRequest="400" />-->
+            <Border x:Name="Bor" Padding="15,0" VerticalOptions="EndAndExpand" StrokeThickness="1" HeightRequest="375" 
+                    BackgroundColor="#1C375C">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25,25,0,0"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Margin="0,0,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label  Text="{Binding Result}" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="End"
+                                Margin="0,30,20,5" TextColor="#F0F0F0" Grid.Column="1" FontAttributes="Bold"/>
+                        <Label  Text="=" Grid.Column="2" HorizontalOptions="End" TextColor="White" FontSize="40" Margin="0,30,10,5"/>
+                        <Button Text="AC" Margin="0,30,0,5" 
+                                Clicked="ClearEntries" HorizontalOptions="Start" FontSize="Large"
+                                CornerRadius="20" Grid.Column="0" WidthRequest="90"
+                                BackgroundColor="Red" TextColor="Black" FontAttributes="Bold"/>
+                    </Grid>
+                    <Grid RowSpacing="10" Margin="0,30,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Picker x:Name="AreaPicker" Title="Area of" FontSize="Large" Grid.Row="0" Grid.ColumnSpan="2"
+                            TitleColor="LightSlateGray" TextColor="White">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Square</x:String>
+                                    <x:String>UnequalRectangle</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Entry x:Name="SideEntry" Placeholder="Side" Text="{Binding Side}" IsVisible="True"  
+                           FontSize="Large" Grid.Row="1" Grid.ColumnSpan="2"
+                           ClearButtonVisibility="WhileEditing" Keyboard="Telephone" 
+                           PlaceholderColor="LightSlateGray" TextColor="White"/>
+                        <Entry x:Name="LengthEntry" Placeholder="Length" Text="{Binding Length}" IsVisible="True" 
+                               PlaceholderColor="LightSlateGray" Grid.Row="2" Grid.Column="0"/>
+                        <Entry x:Name="WidthEntry" Placeholder="Width" Text="{Binding Width}" 
+                               PlaceholderColor="LightSlateGray" IsVisible="True" Grid.Row="2" Grid.Column="1"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+
+
+
 
             <StackLayout Orientation="Horizontal">
-                <Entry x:Name="LengthEntry" Placeholder="Length" Text="{Binding Length}" IsVisible="False" />
-                <Entry x:Name="WidthEntry" Placeholder="Width" Text="{Binding Width}" IsVisible="False" />
             </StackLayout>
-
-            <Label Text="{Binding Result}" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-
-            <Button Text="Calculate" Command="{Binding CalculateCommand}"/>
-            <Button Text="AC" HorizontalOptions="CenterAndExpand" Clicked="ClearEntries"/>
+            
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Converter">
-        <StackLayout Padding="20">
+        <StackLayout>
+            <Border VerticalOptions="CenterAndExpand" Padding="12,6" Margin="5" 
+                    HeightRequest="500" StrokeThickness="0" >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10,10,10,10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout VerticalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="inputSelect" Text="Select input unit" 
+                                Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="Center" FontSize="40" Margin="0,0,0,30" Opacity="100"
+                                />
+                        <Label x:Name="outputSelect" Text="Select output unit" 
+                                Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="Center" FontSize="40" Margin="0,0,0,30" Opacity="0"
+                               />
+                        <Label x:Name="InputValue" Text="Input the Value" 
+                                Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="Center" FontSize="40" Margin="0,0,0,30" Opacity="0"
+                               />
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                        <Picker x:Name="inputUnitPicker" Title="Input Unit" Grid.Column="0" Grid.Row="2" FontSize="20" 
+                                HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" SelectedIndexChanged="inputUnitPicker_SelectedIndexChanged">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>ไร่</x:String>
+                                    <x:String>งาน</x:String>
+                                    <x:String>ตารางวา</x:String>
+                                    <x:String>ตารางเมตร</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
 
-                <Picker x:Name="inputUnitPicker" Title="Input Unit" Grid.Column="0">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Rai</x:String>
-                            <x:String>Ngan</x:String>
-                            <x:String>Square Wah</x:String>
-                            <x:String>Square Meter</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                        <StackLayout Grid.Column="1" Grid.Row="2">
+                            <Image Source="right.png"  MaximumHeightRequest="50"/>
+                        </StackLayout>
 
-                <Picker x:Name="outputUnitPicker" Title="Output Unit" Grid.Column="1">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Rai</x:String>
-                            <x:String>Ngan</x:String>
-                            <x:String>Square Wah</x:String>
-                            <x:String>Square Meter</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-            </Grid>
 
-            <Entry x:Name="inputField" Placeholder="Enter value" TextChanged="OnTextChanged" Keyboard="Numeric"/>
+                        <Picker x:Name="outputUnitPicker" Title="Output Unit" Grid.Column="2" Grid.Row="2" FontSize="20" 
+                                HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Center" SelectedIndexChanged="outputUnitPicker_SelectedIndexChanged">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>ไร่</x:String>
+                                    <x:String>งาน</x:String>
+                                    <x:String>ตารางวา</x:String>
+                                    <x:String>ตารางเมตร</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
 
-            <Label x:Name="resultLabel" Text="Result will be shown here" FontSize="Large"/>
+                        <Entry x:Name="inputField" Grid.Row="3" Grid.ColumnSpan="3" Placeholder="Enter value" 
+                               TextChanged="OnTextChanged" Keyboard="Numeric" FontSize="20" 
+                               HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               WidthRequest="350" PlaceholderColor="DarkGray" IsVisible="False" Opacity="0" ClearButtonVisibility="WhileEditing"/>
+
+                        <Label x:Name="resultLabel" Grid.Row="1" Grid.ColumnSpan="3" 
+                               Text="Result will be shown here" HorizontalOptions="CenterAndExpand" FontSize="Large"
+                               Margin="0,0,0,30" IsVisible="False" Opacity="0" TextColor="Green" FontAttributes="Bold"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+
+
 
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="ArchLength">
+    <!--<ContentPage Title="ArchLength">
         <StackLayout>
             <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
 
@@ -93,8 +172,8 @@
             <Button Text="Info" Clicked="Button_Clicked_1" WidthRequest="60"/>
 
         </StackLayout>
-    </ContentPage>
-    <ContentPage Title="Angle">
+    </ContentPage>-->
+    <!--<ContentPage Title="Angle">
         <StackLayout>
 
             <Image Source="formula_peo.png" HorizontalOptions="CenterAndExpand"/>
@@ -122,7 +201,7 @@
             <Button Text="AC" HorizontalOptions="Center" WidthRequest="100" Clicked="Button_Clicked_2" />
             <Button Text="Info" Clicked="Button_Clicked_3" WidthRequest="60"/>
         </StackLayout>
-    </ContentPage>
+    </ContentPage>-->
     <ContentPage Title="Mall">
         <VerticalStackLayout  Margin="0,150,0,0">
             <Label Text="กรณีที่ 1" HorizontalOptions="Center"/>

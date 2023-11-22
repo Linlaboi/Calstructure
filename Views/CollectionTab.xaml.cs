@@ -60,6 +60,14 @@ public partial class CollectionTab : TabbedPage
 
     private void OnTextChanged(object sender, TextChangedEventArgs e)
     {
+        var fadeinresult = new Animation((value) =>
+        {
+            resultLabel.Opacity = value;
+        }, 0, 1);
+
+        resultLabel.Animate("Opacity", fadeinresult, length: 500);
+        resultLabel.IsVisible = true;
+
         ConvertAndDisplayValue();
     }
 
@@ -75,16 +83,16 @@ public partial class CollectionTab : TabbedPage
 
         switch (inputUnitPicker.SelectedItem.ToString())
         {
-            case "Rai":
+            case "ไร่":
                 resultInSquareMeters = inputValue * 4 * 100 * 4;
                 break;
-            case "Ngan":
+            case "งาน":
                 resultInSquareMeters = inputValue * 100 * 4;
                 break;
-            case "Square Wah":
+            case "ตารางวา":
                 resultInSquareMeters = inputValue * 4;
                 break;
-            case "Square Meter":
+            case "ตารางเมตร":
                 resultInSquareMeters = inputValue;
                 break;
         }
@@ -92,16 +100,16 @@ public partial class CollectionTab : TabbedPage
         double finalResult = 0;
         switch (outputUnitPicker.SelectedItem.ToString())
         {
-            case "Rai":
+            case "ไร่":
                 finalResult = resultInSquareMeters / (4 * 100 * 4);
                 break;
-            case "Ngan":
+            case "งาน":
                 finalResult = resultInSquareMeters / (100 * 4);
                 break;
-            case "Square Wah":
+            case "ตารางวา":
                 finalResult = resultInSquareMeters / 4;
                 break;
-            case "Square Meter":
+            case "ตารางเมตร":
                 finalResult = resultInSquareMeters;
                 break;
         }
@@ -119,13 +127,6 @@ public partial class CollectionTab : TabbedPage
     {
         await DisplayAlert("Factors Explanation","ความหมายของแต่ละตัวแปร:\n\n" + "R: รัศมีจุดศูนย์ถ่วงของความโค้ง\n" +"θ: มุมรัศมีความโค้ง\n",
             "OK");
-    }
-
-    private void Button_Clicked_2(object sender, EventArgs e)
-    {
-        r2Entry.Text = "";
-        dEntry.Text = "";
-        AngleviewModel.Result = 0;
     }
 
     private async void Button_Clicked_3(object sender, EventArgs e)
@@ -148,6 +149,61 @@ public partial class CollectionTab : TabbedPage
     private async void Button_Clicked_6(object sender, EventArgs e)
     {
         await Navigation.PushModalAsync(new EquationPage(3));
+
+    }
+
+    private async void inputUnitPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        /*var fadeoutinput = new Animation((value) =>
+        {
+            inputSelect.Opacity = value;
+        },1,0);
+
+        var fadeinoutput = new Animation((value) =>
+        {
+            outputSelect.Opacity = value;
+        }, 0, 1);
+
+        inputSelect.Animate("Opacity", fadeoutinput, length: 500);
+        await Task.Delay(1000);
+        outputSelect.Animate("Opacity", fadeinoutput, length: 500);*/
+
+        await InputValue.FadeTo(0, 500);
+        await inputSelect.FadeTo(0, 500);
+        await Task.Delay(500);
+        await outputSelect.FadeTo(1, 500);
+        await Task.Delay(500);
+    }
+
+    private async void outputUnitPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        /*var fadeoutoutput = new Animation((value) =>
+        {
+            outputSelect.Opacity = value;
+        }, 1, 0);
+
+        var fadeinvalue = new Animation((value) =>
+        {
+            InputValue.Opacity = value;
+        }, 0, 1);
+        var fadeinfield = new Animation((value) =>
+        {
+            inputField.Opacity = value;
+        }, 0, 1);
+
+        inputSelect.Animate("Opacity", fadeoutoutput, length: 500);
+        await Task.Delay(600);
+        outputSelect.Animate("Opacity", fadeinvalue, length: 500);
+        await Task.Delay(200);
+        inputField.Animate("Opacity", fadeinfield, length: 500);
+        inputField.IsVisible = true;*/
+
+        await outputSelect.FadeTo(0, 500);
+        await Task.Delay(500);
+        await InputValue.FadeTo(1, 500);
+        await Task.Delay(200);
+        await inputField.FadeTo(1, 500);
+        inputField.IsVisible = true;
 
     }
 }

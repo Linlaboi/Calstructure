@@ -13,9 +13,9 @@
                 <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Text="Result" VerticalOptions="Center" Margin="40,20,0,0" FontSize="24" FontAttributes="Italic,Bold"
-                   TextColor="Green"/>
+                   TextColor="#F5F7F8"/>
             <Label Grid.Column="1" Text="{Binding Result}" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,30,40,10" 
-                   TextColor="Green"/>
+                   TextColor="#F5F7F8"/>
         </Grid>
 
 
@@ -29,7 +29,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="W =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="wEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding W}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="wEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding W}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
 
@@ -40,7 +40,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="Ls =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="lsEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding Ls}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="lsEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding Ls}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
 
@@ -51,7 +51,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
                     <Label Margin="5" Text="H =" FontSize="26" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="0" TextColor="White"/>
-                    <Entry Margin="20,0,20,0" x:Name="hEntry" Placeholder="Enter value" TextColor="Green" FontSize="Medium" Text="{Binding H}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
+                    <Entry Margin="20,0,20,0" x:Name="hEntry" Placeholder="Enter value" TextColor="#F5F7F8" FontSize="Medium" Text="{Binding H}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Grid.Column="1" />
                     <Button Text="-" Grid.Column="2" CornerRadius="30" WidthRequest="30" HeightRequest="20" Background="#D71313"/>
                 </Grid>
                 <Grid Margin="0,50,0,0">
@@ -59,10 +59,16 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
                     <Button Grid.Column="0" Text="Clear" FontSize="20" FontAttributes="Bold" 
-                    WidthRequest="200" Margin="80,0,0,0" Clicked="Button_Clear_Clicked" Background="#D71313" HorizontalOptions="Center"/>
-                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked" WidthRequest="50" HeightRequest="50" Margin="80,0,0,0" CornerRadius="25" Background="#164863"/>
-                    <Button Grid.Column="1" Text="Back" FontSize="20" FontAttributes="Bold" Clicked="Button_Goback" WidthRequest="50" HeightRequest="50" Margin="10,0,00,0" CornerRadius="25" Background="#164863"/>
+                            WidthRequest="225" Margin="50,0,0,0" Clicked="Button_Clear_Clicked" Background="#D71313" HorizontalOptions="CenterAndExpand"/>
+                    <Button Grid.Column="1" Text="?" FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked" 
+                            WidthRequest="50" HeightRequest="50" Margin="50,0,0,0" CornerRadius="25" Background="#1C375C"/>
+                    <Button Grid.Row="1" Grid.ColumnSpan="2" Text="Back" FontSize="20" FontAttributes="Bold" 
+                            WidthRequest="300" Margin="0,30,0,0" Background="#1C375C" HorizontalOptions="CenterAndExpand" Clicked="Button_Goback"/>
                 </Grid>
             </StackLayout>
         </Frame>
